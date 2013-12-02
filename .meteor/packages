@@ -7,11 +7,9 @@ standard-app-packages
 autopublish
 preserve-inputs
 dynasign-b3
-parsleyb3
 coffeescript
 accounts-base
 accounts-password
-videojs
 underscore
 helpless-b3
 iron-router
