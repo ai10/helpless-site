@@ -3,3 +3,12 @@ table.center {
     margin-right:auto;
 }
 
+code {
+    background-color: #222222;
+    color: #05AA12;
+}
+
+.tab { margin-left:30px;}
+.tab2 { margin-left: 60px;}
+.tab3 { margin-left: 90px;}
+

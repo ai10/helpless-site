@@ -65,6 +65,7 @@
 <div class="jumbotron">
     <h3>Dynamic dialog/prompt panels.<h3>
             <code>b3.Prompt { <br>
+                <p class="tab">
                 text: 'What is your name?' <br>
                 dialog: true <br>        
         confirmation: true <br>
@@ -76,25 +77,37 @@
         label: 'My name is helpless-b3.' <br>
         placeholder: 'Me Tarzan, you Jane.' <br>
         icon: 'glyphicon glyphicon-thumbs-up' <br>
+        </p>
         } <br>
     </code>
         <p>&nbsp;</p>
         <p>Events can be attached by the 'selectClass'</p>
         <p><code>
-            name=""
-            <dt>Template.b3Prompt.events
-            <dd>'keyup input.hello': ( e, t )-><br>
-            <dd>name = e.target.value
-            <dd>b3.flashError "I don't know you ...  "+name, {
-            <dd> single: 'me'
-            <dd> }
-            <dd>'click button.hello': ( e, t )-><br>
-            <dd> b3.flashSuccess "Oh hey there :) "+ name, {
-            <dd> single: 'me'
-            <dd> }
-            <dd>
-        </dl>
-        </code></p>
+            name=""<br>
+            Template.b3Prompt.events <br>
+            <span class="tab">
+            'keyup input.hello': ( e, t )-><br></span>
+            <span class="tab2">
+                name = e.target.value <br><span>
+                    <span class="tab2">b3.flashError "I don't know you ...  "+name, { </span><br>
+            <span class="tab3">
+            single: 'me' <br>
+            </span>
+            <span class="tab2">
+            }</span><br>
+            </p>
+            <span class="tab">
+            'click button.hello': ( e, t )-><br></span>
+            <span class="tab2">
+            b3.flashSuccess "Oh hey there :) "+ name, { <br></span>
+            <span class="tab3">
+            single: 'me' <br></span>
+            <span class="tab2">
+            }<br>
+            </span>
+            </p>
+    </code>
+    </p></p>
 </code>
 <button id="dialog" class="btn btn-primary">Start Dialog</button>
 <p>&nbsp;</p>
@@ -104,8 +117,8 @@
     <h3>Dynamic modal templates, e.g.:</h3>
     <p><code>
         b3.videoModal parentContext, { <br>
-        poster: '/MenInBlack.png' <br>
-        src: 'http://www.mp4point.com/downloads/2530783c8c00.mp4' <br>
+        <p class="tab">poster: '/MenInBlack.png' <br>
+        src: 'http://www.mp4point.com/downloads/2530783c8c00.mp4' <br></p>
         }<br>
     </code>
     </p>
