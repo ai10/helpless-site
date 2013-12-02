@@ -43,7 +43,7 @@ Template.home.events
             selectClass: 'hello'
             header: 'Hi!'
             label: 'My name is helplessb3.'
-            placeholder: 'Me Tarzan, you Jane.'
+            placeholder: 'Well, what other secrets are there?'
             icon: 'glyphicon glyphicon-thumbs-up'
         }
     'click button#videoModal': ->
