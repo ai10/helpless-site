@@ -19,3 +19,6 @@
 [submodule "packages/videojs-b3"]
 	path = packages/videojs-b3
 	url = https://github.com/charlesjshort/videojs-b3.git
+[submodule "packages/parsley-b3"]
+	path = packages/parsley-b3
+	url = https://github.com/charlesjshort/parsley-b3.git
