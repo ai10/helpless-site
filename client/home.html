@@ -3,19 +3,19 @@
     <h2 class="center">helpless-b3: Bootstrap 3 helpers with Less files.</h2>
 </div>
 <div class="jumbotron">
-    <h3>Example Alerts</h3>
-    <p>Bootstrap 3 types: success, danger (error), warn, and info.</p>
-    <p>Basic Alerts require dismissal.</p>
+    <h3>Dynamic Alerts</h3>
+    <p><small>Success, danger (error), warn, and info types.</small></p>
+    <p><small>Basic Alerts require dismissal.</small></p>
     <div class ="center">
     <code>b3.alertSuccess 'I don't go away until you close me.'</code>
+    <button id='alertSuccess' class="btn btn-success">Not Going Away.</button>
     <p class="center">
     <p>Flash alerts fade way after a few seconds.</p>
-    <button id='alertSuccess' class="btn btn-success">Not Going Away.</button>
     </p>
     <code>b3.flashError 'I flash for a few seconds.'</code>
     <p class="center"><button id='flashError' class="btn btn-danger">flashError</button></p>
 </div>
-    <h3>Region is an option.</h3>
+    <h3>Region is a 3x3 option.</h3>
     <code>b3.flashWarn 'textTopLeft', { region: 'topLeft' }</code>
     <code>b3.flashInfo 'textBottomRight', { region: 'bottomRight' }</code>
     <p>&nbsp;</p>
@@ -62,18 +62,17 @@
 </table>
 </div>
 <div class="jumbotron">
-    <h3>b3Alerts optionaly become dialog boxes.<h3>
-            <code>b3.alertInfo ' What is your name?', { <br>
+    <h3>Dynamic dialog/prompt panels.<h3>
+            <code>b3.Prompt { <br>
+                text: 'What is your name?' <br>
                 dialog: true <br>        
         confirmation: true <br>
         buttonText: 'say Hi.' <br>
-        region: 'middleCenter' <br>
         type: 'info' <br>
-        block: 'alert-block' <br>
         inputType: 'text' <br>
         selectClass: 'hello' <br>
         header: 'Hi!' <br>
-        label: 'My name is helplessb3.' <br>
+        label: 'My name is helpless-b3.' <br>
         placeholder: 'Me Tarzan, you Jane.' <br>
         icon: 'glyphicon glyphicon-thumbs-up' <br>
         } <br>
@@ -82,16 +81,15 @@
         <p>Events can be attached by the 'selectClass'</p>
         <p><code>
             name=""
-            <dt>Template.b3Alert.events
+            <dt>Template.b3Prompt.events
             <dd>'keyup input.hello': ( e, t )-><br>
             <dd>name = e.target.value
-            <dd>b3.flashError name+" is not me.", {
+            <dd>b3.flashError "I don't know you ...  "+name, {
             <dd> single: 'me'
             <dd> }
             <dd>'click button.hello': ( e, t )-><br>
-            <dd> b3.flashError "Oh hey there :) "+ name, {
+            <dd> b3.flashSuccess "Oh hey there :) "+ name, {
             <dd> single: 'me'
-            <dd> type: 'success'
             <dd> }
             <dd>
         </dl>
@@ -99,10 +97,18 @@
 </code>
 <button id="dialog" class="btn btn-primary">Start Dialog</button>
 <p>&nbsp;</p>
-<p>Note: the 'single' option causes the existing 'me' alert to be updated; rather than creating a new alert.</p>
+<p>The 'single' option causes the existing 'me' alert to be updated; rather than creating a new alert.</p>
 </div>
 <div class='jumbotron'>
-    <h3>Dynamic modal templates are included too.</h3>
+    <h3>Dynamic modal templates, e.g.:</h3>
+    <p><code>
+        b3.videoModal parentContext, { <br>
+        poster: '/videojs.jpg' <br>
+        src: 'http://vjs.zencdn.net/v/oceans.mp4' <br>
+        }<br>
+    </code>
+    </p>
+
     <button id="videoModal" class="btn btn-default">Launch Modal</button>
 </div>
 </template>

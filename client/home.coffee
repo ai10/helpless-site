@@ -33,13 +33,12 @@ Template.home.events
         b3.flashInfo 'bottomRight', { region: 'bottomRight' }
 
     'click button#dialog': ->
-        b3.alertInfo ' What is your name?', {
+        b3.Prompt {
+            text: ' What is your name?'
             dialog: true
             confirmation: true
             buttonText: ' say Hi.'
-            region: 'middleCenter'
             type: 'info'
-            block: 'alert-block'
             inputType: 'text'
             selectClass: 'hello'
             header: 'Hi!'
@@ -49,19 +48,19 @@ Template.home.events
         }
     'click button#videoModal': ->
         vI = {
-            poster: '/'
-            video: 'http://vjs.zencdn.net/v/oceans.mp4'
+            poster: '/videojs.jpg'
+            src: 'http://vjs.zencdn.net/v/oceans.mp4'
         }
         b3.videoModal @, vI
 
 name = ""
-Template.b3Alert.events
+Template.b3Prompt.events
     'keyup input.hello': ( e, t )->
         name = e.target.value
-        b3.flashError name+" is not me!", { single: 'me' }
+        b3.flashError "I don't know you ... "+name, { single: 'me' }
 
     'click button.hello': ( e, t ) ->
-        b3.flashSuccess 'Oh hey there :) '+name+' i forget names.', {
+        b3.flashSuccess 'Oh hey there :) '+name+', i forget names.', {
             single: 'me'
             type: 'success'
         }
