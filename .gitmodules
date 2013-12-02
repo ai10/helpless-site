@@ -7,3 +7,9 @@
 [submodule "packages/videojs-meteor"]
 	path = packages/videojs-meteor
 	url = https://github.com/charlesjshort/videojs-meteor.git
+[submodule "helpless-b3"]
+	path = helpless-b3
+	url = https://github.com/charlesjshort/helpless-b3.git
+[submodule "packages/dynasign-b3"]
+	path = packages/dynasign-b3
+	url = https://github.com/charlesjshort/dynasign-b3.git
