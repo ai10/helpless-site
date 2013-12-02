@@ -48,8 +48,8 @@ Template.home.events
         }
     'click button#videoModal': ->
         vI = {
-            poster: '/videojs.jpg'
-            src: 'http://vjs.zencdn.net/v/oceans.mp4'
+            poster: '/MenInBlack3.png'
+            src: 'http://www.mp4point.com/downloads/2530783c8c00.mp4'
         }
         b3.videoModal @, vI
 
